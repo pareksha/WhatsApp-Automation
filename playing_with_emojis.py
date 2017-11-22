@@ -18,35 +18,33 @@ except Exception as e:
 
 actions = ActionChains(driver)
 actions.send_keys(Keys.TAB)
-actions.send_keys('Notepad')
+actions.send_keys('Gourav')
 actions.send_keys(Keys.RETURN)
 actions.perform()
 
 time.sleep(2)
 
 string = '''
-                     X
-                X       X
-            X               X
-        X       HAPPY     X
-    X       BIRTHDAY     X
- X            NIKHIL           X
-     X        BHAIYA       X
-         X                     X
-             X             X
-                 X     X
-                     X
+22  22  22  22
+22  22  22  22  
+22                            22
+22       CHUTKU      22
+22         LOVES        22
+22        BHIIYA        22
+22                            22
+22  22  22  22
+22  22  22  22  
 '''
 
 actions = ActionChains(driver)
 actions.send_keys('To bhaiya-')
-
+actions.perform()
 
 for char in string:
-    if char == 'X':
+    if char + '2'== '22':
         emoji_container = driver.find_element_by_class_name('compose-btn-emoji').click()
         actions = ActionChains(driver)
-        actions.send_keys('cake')
+        actions.send_keys('Kiss')
         actions.send_keys(Keys.RETURN)
         actions.perform()
         emoji_container = driver.find_element_by_class_name('emoji-button-container')
@@ -65,5 +63,6 @@ for char in string:
         actions.perform()
 
 actions = ActionChains(driver)
-actions.send_keys(Keys.ENTER)
+actions.send_keys(Keys.RETURN)
+actions.perform()
 driver.quit()
