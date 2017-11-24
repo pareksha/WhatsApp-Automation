@@ -49,7 +49,7 @@ time.sleep((wish_start_dt - current_dt).total_seconds())
 
 actions = ActionChains(driver)
 actions.send_keys(Keys.TAB)
-actions.send_keys('Notepad')
+actions.send_keys('Shreya')
 actions.send_keys(Keys.RETURN)
 actions.perform()
 time.sleep(1)
